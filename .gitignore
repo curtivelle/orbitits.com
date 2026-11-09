@@ -2,3 +2,5 @@
 .pdf-tools/
 .review/
 __pycache__/
+
+.release/

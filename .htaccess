@@ -1,0 +1,49 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /orbitits.com/404.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /orbitits.com/
+RewriteRule ^(?:src|laravel|tests|\.release|\.git)(?:/|$) - [F,L]
+RewriteRule ^(?:README|INFORMATION-NEEDED|LAUNCH-NOTES)\.md$ - [F,L]
+RewriteRule ^(?:build|verify)\.py$ - [F,L]
+RewriteRule ^about-us/?$ about.html [R=301,L]
+RewriteRule ^our-clients/?$ our-clients.html [R=301,L]
+RewriteRule ^seo-services-in-bangladesh/?$ seo-services.html [R=301,L]
+RewriteRule ^aeo-geo-services-in-bangladesh/?$ aeo-geo-services.html [R=301,L]
+RewriteRule ^services/?$ services.html [R=301,L]
+RewriteRule ^web-development/?$ web-development.html [R=301,L]
+RewriteRule ^seo-services/?$ seo-services.html [R=301,L]
+RewriteRule ^digital-marketing/?$ digital-marketing.html [R=301,L]
+RewriteRule ^aeo-geo-services/?$ aeo-geo-services.html [R=301,L]
+RewriteRule ^ui-ux-design/?$ ui-ux-design.html [R=301,L]
+RewriteRule ^domain-hosting/?$ domain-hosting.html [R=301,L]
+RewriteRule ^e-commerce-solutions/?$ e-commerce-solutions.html [R=301,L]
+RewriteRule ^it-consultancy/?$ it-consultancy.html [R=301,L]
+RewriteRule ^mobile-app-development/?$ mobile-app-development.html [R=301,L]
+RewriteRule ^graphics-design/?$ graphics-design.html [R=301,L]
+RewriteRule ^video-editing-production/?$ video-editing-production.html [R=301,L]
+RewriteRule ^social-media-management/?$ social-media-management.html [R=301,L]
+RewriteRule ^pricing/?$ pricing.html [R=301,L]
+RewriteRule ^about/?$ about.html [R=301,L]
+RewriteRule ^team/?$ team.html [R=301,L]
+RewriteRule ^portfolio/?$ portfolio.html [R=301,L]
+RewriteRule ^blog/?$ blog.html [R=301,L]
+RewriteRule ^planning-a-business-website/?$ planning-a-business-website.html [R=301,L]
+RewriteRule ^choosing-a-service-package/?$ choosing-a-service-package.html [R=301,L]
+RewriteRule ^content-that-answers-questions/?$ content-that-answers-questions.html [R=301,L]
+RewriteRule ^faq/?$ faq.html [R=301,L]
+RewriteRule ^contact/?$ contact.html [R=301,L]
+RewriteRule ^privacy/?$ privacy.html [R=301,L]
+RewriteRule ^terms/?$ terms.html [R=301,L]
+RewriteRule ^service-policy/?$ service-policy.html [R=301,L]
+RewriteRule ^cookies/?$ cookies.html [R=301,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+<FilesMatch "^(?:README|INFORMATION-NEEDED|LAUNCH-NOTES)\.md$|^(?:build|verify)\.py$">
+Require all denied
+</FilesMatch>
